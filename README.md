@@ -1,7 +1,7 @@
 horizon-view-agent
 =========
 
-This Ansible role is for installing and configuring the VMware Horizon View Agent application in Linux.
+This Ansible role is for installing and configuring the VMware Horizon View Agent application on Linux.
 
 Role Variables
 --------------
