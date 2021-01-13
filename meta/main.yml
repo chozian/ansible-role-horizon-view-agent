@@ -1,0 +1,19 @@
+galaxy_info:
+  role_name: horizon-view-agent
+  author: Chris Hozian
+  description: VMware Horizon View Agent for Linux
+  license: BSD-3-Clause
+  min_ansible_version: 2.10
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  galaxy_tags:
+    - vmware
+    - horizon
+    - view
+    - agent
+    - remote
+    - desktop
+    - vdi
+dependencies: []
