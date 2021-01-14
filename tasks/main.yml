@@ -33,3 +33,9 @@
     path: /tmp/VMware-horizonagent-linux-x86_64-7.13.0-16944161.tar.gz
     state: absent
   when: view_agent_already_installed.stat.exists == 0
+
+- name: Recursively remove Horizon View Agent tarball extracted directory
+  ansible.builtin.file:
+    path: /tmp/VMware-horizonagent-linux-x86_64-7.13.0-16944161
+    state: absent
+  when: view_agent_already_installed.stat.exists == 0
