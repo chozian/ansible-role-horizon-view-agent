@@ -23,7 +23,7 @@
   when: view_agent_already_installed.stat.exists == 0
 
 - name: Install Horizon View Agent
-  ansible.builtin.shell: install_viewagent.sh -A yes -a yes -f yes -F no -S no -U no -C no
+  ansible.builtin.shell: ./install_viewagent.sh -A yes -a yes -f yes -F no -S no -U no -C no
   args:
     chdir: /tmp/VMware-horizonagent-linux-x86_64-7.13.0-16944161
   when: view_agent_already_installed.stat.exists == 0
