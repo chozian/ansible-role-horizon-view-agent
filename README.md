@@ -3,15 +3,20 @@ horizon-view-agent
 
 This Ansible role is for installing and configuring the VMware Horizon View Agent application on Linux.
 
-Role Variables
---------------
-
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
 Requirements
 ------------
 
 Download the VMware Horizon View Agent tarball for Linux from VMware's site. Then place it in the files directory.
+
+Role Variables
+--------------
+
+See [defaults/main.yml](defaults/main.yml)
+
+Dependencies
+------------
+
+See [meta/main.yml](meta/main.yml)
 
 Example Playbook
 ----------------
