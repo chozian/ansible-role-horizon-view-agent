@@ -26,7 +26,14 @@
   ansible.builtin.shell: ./install_viewagent.sh -A yes -a yes -f yes -F no -S no -U no -C no
   args:
     chdir: /tmp/VMware-horizonagent-linux-x86_64-7.13.0-16944161
+  register: view_agent_initial_install
   when: view_agent_already_installed.stat.exists == 0
+
+- name: Reinstall Horizon View Agent to workaround viewagent install bug
+  ansible.builtin.shell: ./install_viewagent.sh -A yes -a yes -f yes -F no -S no -U no -C no
+  args:
+    chdir: /tmp/VMware-horizonagent-linux-x86_64-7.13.0-16944161
+  when: view_agent_initial_install.changed
 
 - name: Remove Horizon View Agent tarball
   ansible.builtin.file:
